@@ -1,0 +1,2 @@
+USE menagerie;
+DESCRIBE pet;
