@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+			div.leftPanel {
+				border:5px solid green;
+				height:100vh;
+				width:20%;
+				float:left;
+
+			}
+			div.rigthSection {
+				border:5px solid steelblue;
+				overflow:hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="leftPanel"> 
+			<h>Panel
+		</div>
+
+		<div class="rigthSection">
+			<h>Content</h>
+		</div>
+	</body>
+</html>
