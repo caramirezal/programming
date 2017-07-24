@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+			body {
+				margin:0px;
+			}
+			div.topLegend {
+				padding:20px;
+				border:none;
+				margin:0px;
+				background-color:#323030;
+				height:45px;
+			}
+			div.topLegend h {
+				margin:100px;
+				color:white;
+				font-size:35px;
+				font-weight:bold;
+			}
+			div.leftPanel {
+				height:100vh;
+				width:20%;
+				float:left;
+				padding:30px;
+				padding-top:20px;
+				font-size:22px;
+				background-color:white;
+				font-weight:bold;
+
+			}
+			ol.leftPanel li {
+				color:black;
+				margin:5px;
+				padding:5px;
+				color:#054EA0
+				
+			}
+			div.rigthSection {
+				overflow:hidden;
+				height:100%;
+				font-size:25px;
+				padding-left:120px;
+				padding-right:200px;
+				padding-top:30px;
+			}
+   OL { counter-reset: item }
+   LI { display: block }
+   LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+		</style>
+	</head>
+
+	<body>
+		<div class="topLegend"> 
+
+				<h> SQUAD </h>
+	
+		</div>
+
+
+		<div class="leftPanel"> 
+			<ol class="leftPanel">
+				<li>Overview</li>
+				<li>Installation</li>
+				<li>Loading a network model
+					<ol> 
+						<li>SQUAD format</li>
+						<li>Starting from a discrete model</li>
+						<li>Starting from a connectivity matrix</li>	
+					</ol>
+				</li>
+				<li>Running simulations
+					<ol>
+						<li>Setting initial conditions</li>
+						<li>Setting parameters</li>
+						<li>Simulating perturbations</li>
+						<li>Simulating mutants</li>
+						<li>Normalized Hill Cubes</li> 
+					</ol>
+				</li>
+				<li>Calculating Steady States</li>
+			</ol>
+		</div>
+
+		<div class="rigthSection">
+
+	
+<h2 > 1. Overview </h1>
+
+<p> During the definition of a regulatory network model it is frequently convenient to start 
+with simple formalisms and then to transit to more refined models. Continuous interpolations 
+of Boolean Regulatory Networks (BRN) are defined so as to preserve dynamical characteristics 
+of discrete model but extending the range of values of the variables. The main goal of
+SQUAD is to provide a flexible tool to automatically transform a discrete BRN model to a 
+continuous system. 
+</p>
+
+<p>
+Here, we present the main features of the SQUAD R package to simulate continuous 
+interpolations of BRN models. SQUAD R package is a useful tool to define, set up, and run 
+simulations using continuous interpolations of regulatory network models. It also can perform 
+stationary states search. The next figure shows schematically the main features of the 
+SQUAD R package. SQUAD extends the functionality of the 
+<a href="https://cran.r-project.org/web/packages/BoolNet/index.html">BoolNet</a> R package 
+(represented as a pink box). BoolNet has integrated an optimized method to find synchronous 
+stable states by using the Dubrova algorithm. By the other hand, in an asynchronous context 
+SQUAD performs an optimized heuristic method using BDD representations and model checking 
+by calling <a href="ginsim.org">GINsim</a> (green box). Hence, the modeller can start 
+defining a discrete BRN model and choose synchronous or asynchronous efficient methods for 
+stationary states search.
+</p>
+
+
+<img src="figures/overview.gif" alt="phaseSpace" style="width:1000px;height:650px;">
+
+
+
+<p> If needed, the modeler can transit to more refined continuous methods as 
+squad or normalized Hill Cubes interpolations of BRN models. </p>
+
+
+
+			</p>
+		</div>
+	</body>
+</html>
