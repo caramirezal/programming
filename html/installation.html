@@ -178,15 +178,70 @@ which has a value equal to <code>0</code>.
 
 <p> For the vast majority of regulatory interactions only information regarding direction and type 
 (positive, negative, or dual) is available. This qualitative information can
-be represented by graphs or adjacency matrices. In this case, adjacency matrices <b>M</b> 
-representing networks can be defined as square matrices that contains nodes names in both columns 
+be represented by graphs or adjacency matrices. An adjacency matrix <b>M</b> 
+representing a network can be defined as square matrix that contains nodes names in both columns 
 and rows. Every entry <b>m</b><sub>i,j</sub> takes the values 1, -1, or 0 if there is a positive, negative or
 no interaction from node <i>i</i> to <i>j</i>, respectively. So defined static representation
-of regulatory networks is frequently referred as the network <i>topology</i>.
+of a regulatory network is frequently referred as the network <i>topology</i>.
 </p>
 
-<p> Hence, it is very useful to automate the definition of a dynamic BRN model by means of its 
-network topology. SQUAD R package incorporates the graphToModel() function to automate this task. </p>
+<p> It is very useful to automate the definition of a dynamic BRN model by means of its 
+network topology. SQUAD R package incorporates the graphToModel() function to automate this task.
+In the following example, a random connectivity matrix is defined using the randomMatrix() function.
+The output of randomMatrix() is a square matrix R object. The parameter matrixDimension is set up 
+to 10 and defines the number of nodes. 
+The adjacency matrix is then transformed to a BRN model using graphToModel() function.
+
+ </p>
+
+<code>
+> ## getting a random connectivity matrix of 10 nodes <br>
+> adjMatrix <- randomMatrix(matrixDimension=10) <br>
+> <br>
+> ## connectivity matrix to BRN model  <br>
+> net.b <- graphToModel(adjMatrix) <br>
+> <br>
+> ## plotting the graph <br>
+> plotNetworkWiring(net.b) <br>
+</code>
+
+<p> </p>
+
+<img src="figures/randomMatrix.png"  style="padding-left:200px;width:600px;height:600px;">
+
+<p> The figure shows the network topology as defined by the connectivity matrix defined
+using randomMatrix(). In real cases, adjacency matrices
+for biological regulatory networks can be obtained from available data bases or by using
+inference methods from high-throughput expression data. <p>
+
+<p>Then, asContinuous() function can be applied to <code>net.b</code> 
+BooleanNetwork object to obtain a squad interpolation as shown in the next code lines.
+</p>
+
+<br>
+<code>
+> ## BRN to squad <br>
+> net.sq <- asContinuous(net.b)  <br>
+> <br>
+> ## running simulation <br>
+> squad(net.sq, initialState = rep(0,length(net.sq$genes)),plot = "timeSerie") <br>
+</code>
+
+<br>
+
+<img src="figures/startingFromMatrix.png" style="padding-left:200px;width:600px;height:600px;">
+
+<br>
+
+<p> It is noteworthy to say that the modeller can end up with a BRN discrete model or transit to a continuous interpolation depending on the modeling requirements.</p>
+
+<h3> 5. Running simulations</h3>
+
+<p> Once we have a continuous Regulatory Network (RN) squad object, simulations can be carried out. The
+squad() function was designed to be a platform for setting simulation parameters, performing simulations,
+and optionally plotting results. 
+
+In this section, squad() function is described. </p>
 
 </div>
 
