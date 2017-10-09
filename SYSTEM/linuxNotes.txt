@@ -1,0 +1,2 @@
+## add new command to linux
+sudo apt-get install gdrive /usr/local/bin/gdrive
