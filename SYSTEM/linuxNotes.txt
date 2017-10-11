@@ -1,2 +1,9 @@
 ## add new command to linux
 sudo apt-get install gdrive /usr/local/bin/gdrive
+
+## Ejecutar un script (=anticipos) cada hora usando cron
+sudo cron 0 * * * * anticipos
+
+## inspeccion de scripts ejecutandose cusando cron
+ps aux | grep $(cat /var/run/crond.pid)
+
