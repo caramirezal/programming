@@ -1,0 +1,31 @@
+
+// important to log as root using
+sudo -s
+
+// initiate postgresql
+su - postgres
+
+// create a database
+createdb testdb
+
+// select a database
+psql testdb
+
+// create void table
+CREATE TABLE weather (
+    city            varchar(80),
+    temp_lo         int,           -- low temperature
+    temp_hi         int,           -- high temperature
+    prcp            real,          -- precipitation
+    date            date
+);
+
+// exit database
+\b
+
+// exit psql
+ctrl d
+
+//
+
+
