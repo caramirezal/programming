@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+     html notes
+     main reference here: https://www.w3schools.com/html/
+-->
+<html lang="en">
+    <head>
+        
+        <!-- Metadata -->
+        <title>Notes on html</title>
+        <meta name="keywords" content="html, notes">
+        
+        
+        <!-- necessary libraries/metadata for bootstrap -->
+        <meta charset="utf-8">
+        <!-- Necessary to scale page dimensions and scaling 
+             in differnet devices
+             -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
+        
+        <!-- mantra to source style css file -->
+        <link rel="stylesheet" href="style.css">
+        
+        
+        
+        <!-- using google fonts
+             https://fonts.google.com/
+        -->
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+        
+        
+    </head>
+    
+     <body>
+         
+         <!-- css file definition example
+           body {
+               background-color: steelblue;
+            }
+           .class {
+               background-color: red;
+          }
+          #id {
+               background-color: green;
+          }
+          -->
+         
+         
+         <!-- Headings -->
+         <h> Normal heading (h) </h>
+         <h1> Heading 1 (h1) </h1>
+         <h2> Heading 2 (h2) </h2>
+         
+         
+         
+         <!-- paragraphs -->
+         <p> This is a paragraph (p) </p>
+         <p1> This is paragraph (p1) <br> </p1>
+         
+         
+         <!-- Text types  
+          https://www.w3schools.com/html/html_formatting.asp
+          --> 
+         <b> This is a bold text <br> </b>
+         <i> This is italic text <br> </i>
+         <em> This is emphasized text </em>
+         
+         
+         <!-- This is a box div example --->
+         <div>
+              <h> This is a box (div) </h>
+         </div>
+         
+         
+         <!--  This is a link -->
+         <p> This is a <a href="https://www.w3schools.com/html/"> 
+                          link 
+                       </a>
+         </p>
+         
+         
+         <!-- This is an image -->
+         <img src="dibujoGlifo.jpg" alt="Image example">
+         
+         
+         <!-- This is a list -->
+         <p> This is a list</p>
+         <ul> 
+             <li> item 1</li>
+             <li> item 2 </li>
+             <li> item 3 </li>
+             <li> item 4 </li>
+         </ul>
+         
+         
+         <!-- Class definition 
+           .class in css file 
+          -->
+         <div class="example">
+             <p> This is a div </p>
+         </div>
+         
+         
+         <!-- id definition
+          id must be unique
+           #id in css file 
+          -->
+         <div id="id_example">
+             <p> This is a unique div </p>
+         </div>
+         
+         
+         <!-- iframes --->
+         <p> This is an iframe</p>
+         <iframe src="index.html"></iframe>
+         
+         
+         <!-- Height nad width sizes ------>
+         <p> Testing height and with sizes </p>
+         <div class="sizes" style="height:20px">
+             <p> div size heigth:20px </p>
+         </div>
+         <!---->
+         <div class="sizes" style="height:50px">
+             <p> div sizes heigth:50px </p>
+         </div>
+         <!---->
+         <div class="sizes" style="height:100px">
+             <p> div sizes heigth:100px </p>
+         </div>
+         <!----->
+         <div class="sizes" style="width:100px">
+             <p> div size width:100px </p>
+         </div>
+         <!---->
+         <div class="sizes" style="width:200px">
+             <p> div size width:200px </p>
+         </div>
+         <!---->
+         <div class="sizes" style="width:500px">
+             <p> div size width:500px </p>
+         </div>
+         
+         
+         <!-- JavaScript script -->
+         <!-- Create a empty parapraph to direct JavaScript output-->
+         <p id="empty_paragraph"></p>
+         <script> 
+              document.getElementById("empty_paragraph").innerHTML="Hola Javascript";
+         </script>
+         
+         
+         <!-- Bootstrap --->
+         <div id="boot" class="container-fluid">
+             <p> This is a container-fluid box</p>
+         </div>
+             
+         
+         <!-- Computer code -->
+         <code>
+             > computer code <br>
+             x + y = 100 <br>
+         </code>
+         
+         <br>
+         
+     </body>
+</html>
