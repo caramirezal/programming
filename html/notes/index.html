@@ -4,15 +4,16 @@
      main reference here: https://www.w3schools.com/html/
 -->
 <html lang="en">
-    <head>
+    <head> <!-- Head is a metadata container -->
         
         <!-- Metadata -->
         <title>Notes on html</title>
         <meta name="keywords" content="html, notes">
         
+        <!-- Define usage of Unicode set of characters -->
+        <meta charset="utf-8">
         
         <!-- necessary libraries/metadata for bootstrap -->
-        <meta charset="utf-8">
         <!-- Necessary to scale page dimensions and scaling 
              in differnet devices
              -->
@@ -121,7 +122,7 @@
          <iframe src="index.html"></iframe>
          
          
-         <!-- Height nad width sizes ------>
+         <!-- Height and width sizes ------>
          <p> Testing height and with sizes </p>
          <div class="sizes" style="height:20px">
              <p> div size heigth:20px </p>
@@ -156,7 +157,9 @@
          </script>
          
          
-         <!-- Bootstrap --->
+         <!-- Bootstrap 
+              Reference here https://www.w3schools.com/html/html_layout.asp
+          --->
          <div id="boot" class="container-fluid">
              <p> This is a container-fluid box</p>
          </div>
@@ -168,7 +171,53 @@
              x + y = 100 <br>
          </code>
          
-         <br>
+         
+         <!-- Entities (~ escaping tag) and symbols 
+              &nsbp - non breaking spase avoids joins string to avoid
+              break in a new line
+          -->
+         <p> 10&nbsp;Km are not breaked when new line <br> 
+             This is an euro &euro; symbol
+         </p>
+         
+         
+         <!-- Forms -->
+         <form>
+             <input type="text" name="data">
+         </form>
+         
+         
+         
+         
+         <!-- block location 
+              For a good reference see:
+              https://internetingishard.com/html-and-css/floats/
+         -->
+         
+         <!-- div floating to left 
+           float:left;
+         -->
+         <div class="leftPanel">
+             <p>This is a left panel</p>
+         </div>
+         
+         
+         <!-- hidden overflow
+           overflow:hidden;
+         --->
+         <div class="rightSection">
+             <p> Hidden over flow panel </p>
+         </div>
+         
+         <!-- Using left and right panels -->
+         <!-- div floating to left 
+           float:left;
+         -->
+         <div class="leftPanel"> new div </div>
+         <!-- div floating to right 
+          float:right;
+          --->
+         <div class="floatRight"> float to right </div>
          
      </body>
 </html>
