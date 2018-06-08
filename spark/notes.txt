@@ -1,0 +1,37 @@
+## Spark installation notes
+
+## Scala installation
+## I downloaded the scala-2.12.6.tgz tar file from the scala web page here https://www.scala-lang.org/download/
+## in the archive section. 
+
+## open the tar
+tar xvf scala-2.12.6.tgz
+
+## log as root admin
+su
+
+## moving file to /usr/local/scala
+mv scala-2.12.6 /usr/local/scala
+
+## make scala accesible 
+export PATH=$PATH:/usr/local/scala/bin
+
+## Spark installation
+## I downloaded spark from the following link https://archive.apache.org/dist/spark/spark-1.3.1/
+## that can be found in the spark web page here https://spark.apache.org/downloads.html
+## The following file was downloaded spark-1.3.1-bin-hadoop2.6.tgz
+
+## spark tar is extracted
+tar xvf spark-1.3.1-bin-hadoop2.6.tgz 
+
+## moving spark to /usr/local/spark
+mv spark-1.3.1-bin-hadoop2.6 /usr/local/spark
+
+## get acces to spark location
+export PATH=$PATH:/usr/local/spark/bin
+
+## initiating spark
+spark-shell
+
+## quit spark
+sys.exit
