@@ -7,3 +7,11 @@ sudo cron 0 * * * * anticipos
 ## inspeccion de scripts ejecutandose cusando cron
 ps aux | grep $(cat /var/run/crond.pid)
 
+## Adding routine exe to path
+## first copy the folder containing the program to a preferred location
+> sudo cp -r myprogramfolder /usr/local/bin
+## add path to environment       
+## use export <location>
+> export /usr/local/bin/myprogramfolder       ## usr/local/bin is arbitrary
+## check everything is ok
+> $PATH
